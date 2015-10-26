@@ -1,0 +1,7 @@
+public class GoodString {
+
+	public String isGood(String s) {
+		return null;
+	}
+
+}

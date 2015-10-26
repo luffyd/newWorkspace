@@ -1,0 +1,7 @@
+public class DevuAndGame {
+
+	public String canWin(int[] nextLevel) {
+		return null;
+	}
+
+}

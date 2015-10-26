@@ -1,0 +1,49 @@
+import java.util.HashMap;
+
+public class CollectingTokens {
+	boolean X[][] = new boolean[51][51];
+	int tokens[];
+	HashMap<String, Integer> hashDp = new HashMap<>();
+
+	public int maxTokens(int[] A, int[] B, int[] tokens, int L) {
+		for (int i = 0; i < A.length; i++) {
+			X[A[i] - 1][B[i] - 1] = true;
+			X[B[i] - 1][A[i] - 1] = true;
+		}
+		this.tokens = tokens;
+		return calc(0, L, "0");
+	}
+
+	private int calc(int start, int L, String key) {
+		if (hashDp.get(key) != null) {
+			return hashDp.get(key);
+		}
+
+		if (L == 0) {
+			hashDp.put(key, tokens[start]);
+			return tokens[start];
+		}
+		int max = 0;
+		for (int i = 0; i < tokens.length; i++) {
+			if (X[start][i]) {
+				int currTokens = tokens[start];
+				tokens[start] = 0;
+				max = Math.max(max, currTokens + calc(i, L - 1, key + i));
+				tokens[start] = currTokens;
+			}
+		}
+		hashDp.put(key+L, max);
+		return max;
+	}
+
+	public static void main(String[] args) {
+		int[] A = new int[] { 9, 1, 7, 10, 5, 8, 3, 4, 2 };
+		int[] B = new int[] { 6, 6, 9, 6, 6, 1, 1, 6, 6 };
+		int[] tokens = new int[] { 4, 2, 1, 6, 3, 7, 8, 5, 2, 9 };
+		int L = 4;
+
+		int expected = 194;
+		System.out.println(new CollectingTokens().maxTokens(A, B, tokens, L));
+	}
+
+}

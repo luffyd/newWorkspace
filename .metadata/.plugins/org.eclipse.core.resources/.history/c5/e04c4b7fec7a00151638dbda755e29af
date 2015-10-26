@@ -1,0 +1,9 @@
+public class DevuAndGame {
+
+	public String canWin(int[] nextLevel) {
+		boolean visited[] = new boolean[nextLevel.length];
+		
+		return null;
+	}
+
+}

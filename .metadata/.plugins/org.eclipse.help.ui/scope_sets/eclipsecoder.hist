@@ -1,0 +1,5 @@
+#Sat Sep 19 18:29:27 PDT 2015
+__DEFAULT__=false
+org.eclipse.sdk.Eclipse.master=true
+org.eclipse.help.ui.localSearch.master=true
+expression=eclipsecoder

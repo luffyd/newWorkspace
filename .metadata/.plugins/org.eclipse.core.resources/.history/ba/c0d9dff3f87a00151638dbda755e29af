@@ -1,0 +1,15 @@
+public class CollectingTokens {
+	boolean X[][] = new boolean[51][51];
+	int tokens[];
+
+	public int maxTokens(int[] A, int[] B, int[] tokens, int L) {
+		for(int i=0;i<A.length;i++){
+			
+		}
+		this.tokens = tokens;
+		for(int i=0;i)
+		max(0,L);
+		return 0;
+	}
+
+}

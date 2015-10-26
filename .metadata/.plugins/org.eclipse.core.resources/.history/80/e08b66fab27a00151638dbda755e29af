@@ -1,0 +1,29 @@
+public class ShopPositions {
+	int t = 0;
+	int m = 0;
+	int n = 0;
+
+	public int maxProfit(int n, int m, int[] c) {
+		int maxProfit = 0;
+		this.m = m;
+		this.n = n;
+		int building = 1;
+		for (int i = 0; i <= m; i++) {
+			for (int j = 0; j <= m; j++) {
+				int pa = i * c[(i + j) * building++];
+				int pb = j * c[(i + j) * building++];
+				t = pa + pb;
+				maxProfit = Math.max(0, calc(i, j, building));
+			}
+		}
+		return maxProfit;
+	}
+
+	private int calc(int a, int b2, int building) {
+		for (int j = 1; j <= m; j++) {
+
+		}
+		return 0;
+	}
+
+}

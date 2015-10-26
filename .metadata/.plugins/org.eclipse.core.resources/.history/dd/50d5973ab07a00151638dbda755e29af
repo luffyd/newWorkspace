@@ -1,0 +1,11 @@
+public class ShopPositions {
+	public int maxProfit(int n, int m, int[] c) {
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < m; j++) {
+				
+			}
+		}
+		return 0;
+	}
+
+}

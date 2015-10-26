@@ -1,0 +1,15 @@
+public class GoodString {
+
+	public String isGood(String s) {
+		int i = s.indexOf("ab");
+		while (i > -1) {
+			s = s.substring(0, i) + s.substring(i + 2);
+		}
+		if (s.length() > 0) {
+			return "Good";
+		} else {
+			return "Bad";
+		}
+	}
+
+}

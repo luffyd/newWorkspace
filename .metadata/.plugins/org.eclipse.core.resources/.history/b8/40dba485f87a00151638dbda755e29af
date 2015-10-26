@@ -1,0 +1,8 @@
+public class CollectingTokens {
+
+	public int maxTokens(int[] A, int[] B, int[] tokens, int L) {
+		max();
+		return 0;
+	}
+
+}

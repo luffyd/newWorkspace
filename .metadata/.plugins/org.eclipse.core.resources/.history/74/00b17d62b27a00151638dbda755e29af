@@ -1,0 +1,23 @@
+public class ShopPositions {
+	int t = 0;
+	public int maxProfit(int n, int m, int[] c) {
+		int prev = 0;
+		int maxProfit = 0;
+		for (int i = 1; i <= m; i++) {
+			int a = i;
+			for (int j = 1; j <= m; j++) {
+				int b = j;
+				int pa = c[(a+b)*i];
+				int pb = c[(a+b)*j];
+				t = pa + pb;
+				maxProfit = Math.max(pa, calc(a,b,j+1));
+			}
+		}
+		return 0;
+	}
+	private int calc(int a, int b2, int i) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
